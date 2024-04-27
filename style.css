@@ -101,3 +101,36 @@ a:hover {
 .dashboard:hover {
     background-color: #7fa9c5;
 }
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(106, 106, 109, 0.944);
+    width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    z-index: 9999;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998; /* Lebih kecil dari z-index popup agar background tidak menutupi popup */
+}
