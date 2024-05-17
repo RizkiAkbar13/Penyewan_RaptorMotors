@@ -19,9 +19,7 @@
                 
                 <label for="password" style="display: block; text-align: left; margin-bottom: 5px;">Password:</label>
                 <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 3px;">
-                
-                <label for="confirm_password" style="display: block; text-align: left; margin-bottom: 5px;">Konfirmasi Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 3px;">
+            
                 
                 <button type="submit" style="background-color: #2980b9; color: #fff; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; transition: background-color 0.3s ease;">Registrasi</button>
             </form>

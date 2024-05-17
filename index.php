@@ -1,3 +1,17 @@
+<?php
+// Memulai sesi
+session_start();
+
+// Memeriksa apakah pengguna telah login
+if (!isset($_SESSION['username'])) {
+    // Jika belum, redirect ke halaman login
+    header("Location: login.php");
+    exit;
+}
+
+// Jika sudah login, lanjutkan ke konten halaman index
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +27,8 @@
     <div class="sidebar" id="sidebar">
         <a href="#" class="dashboard">Dashboard</a>
         <a href="#">Profile</a>
-        <a href="categories.php">Categories</a> <!-- Tautan ke halaman Categories -->
+        <a href="categories.php">Order</a> <!-- Tautan ke halaman Categories -->
+        <a href="pre-order.php">Pre-Order</a>
         <a href="transaction-history.php">Transaction History</a>
         <a href="logout.php" style="color: red;">Logout</a>
         <a href="login.php" class="login-btn">Login</a> <!-- Tombol login dipindahkan ke sidebar -->
