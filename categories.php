@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>Order</title>
     <link rel="stylesheet" type="text/css" href="sidebar.css">
     <style>
         body {
@@ -76,7 +76,7 @@
 </head>
 <body>
     <header>
-        <h1>Categories</h1>
+        <h1>Rent Now</h1>
     </header>
 
     <div class="container">
@@ -106,7 +106,7 @@
     <div class="sidebar" id="sidebar">
         <a href="index.php" class="dashboard">Dashboard</a>
         <a href="#">Profile</a>
-        <a href="categories.php">Categories</a>
+        <a href="categories.php">Order</a>
 <<<<<<< HEAD
         <a href="#">Transaction</a>
 =======

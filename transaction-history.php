@@ -28,6 +28,20 @@
             margin: 5px 0; /* Margin di antara setiap paragraf */
         }
 
+        /* Gaya untuk tombol bayar sekarang */
+        .pay-now-btn {
+            background-color: #00A9FF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .pay-now-btn:hover {
+            background-color: #89CFF3;
+        }
+
         /* Gaya untuk footer */
         footer {
             position: fixed;
@@ -91,11 +105,19 @@
         <div class="transaction-history" id="transactionDetails">
             <!-- Detail transaksi akan ditampilkan di sini -->
         </div>
+        <button class="pay-now-btn" onclick="payNow()">Bayar Sekarang</button>
     </div>
 
     <footer>
         <p>&copy; 2024 Raptor Motors. Copyright protected by akbar.</p>
     </footer>
+    <script>
+    function payNow() {
+        // Redirect to payment page
+        window.location.href = 'payment.php';
+    }
+    </script>
+
 
     <script>
         // Ambil data transaksi dari sessionStorage
@@ -194,6 +216,11 @@
                 sidebarTransactions.innerHTML = "<li>Tidak ada data transaksi yang tersedia</li>";
             }
         };
+
+        function payNow() {
+            // Redirect to payment page
+            window.location.href = 'payment.php';
+        }
     </script>
 </body>
 </html>

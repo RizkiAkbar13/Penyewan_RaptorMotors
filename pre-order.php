@@ -35,7 +35,7 @@ include 'pemesanan_crud.php';
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #ACD793;
             color: #333;
         }
 
@@ -56,16 +56,24 @@ include 'pemesanan_crud.php';
             padding: 6px 12px;
             text-align: center;
             text-decoration: none;
-            background-color: #007bff;
+            background-color: #FF0000;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+        
+        .action-buttons a.edit-button {
+            background-color: #008DDA; 
+        }
+
+        .action-buttons a.delete-button {
+            background-color: #FF0000; 
+        }
 
         .action-buttons a:hover {
-            background-color: #0056b3;
+            background-color: #F6F5F2;
         }
 
         .container {
@@ -105,6 +113,39 @@ include 'pemesanan_crud.php';
 
         .form-container button:hover {
             background-color: #0056b3;
+        }
+
+        /* Warna untuk setiap baris pada tabel data pre-order */
+        tr:nth-child(odd) {
+            background-color: #f9f9f9; /* Warna latar belakang untuk baris ganjil */
+        }
+
+        /* Warna untuk tombol tambah */
+        .form-container button[name="create"] {
+            background-color: #28a745; /* Warna hijau */
+        }
+
+        .form-container button[name="create"]:hover {
+            background-color: #218838; /* Warna hijau gelap saat tombol dihover */
+        }
+
+        /* Warna untuk tombol update */
+        .form-container button[name="update"] {
+            background-color: #ffc107; /* Warna kuning */
+        }
+        .print-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            background-color: #006769; /* Warna hijau */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button[name="update"]:hover {
+            background-color: #e0a800; /* Warna kuning gelap saat tombol dihover */
         }
     </style>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -158,6 +199,8 @@ include 'pemesanan_crud.php';
 
         <div class="table-container">
             <h2>Data Pre-Order</h2>
+            <a href="print_preorder.php" target="_blank" class="print-button">Cetak</a>
+
             <table>
                 <thead>
                     <tr>
@@ -183,8 +226,8 @@ include 'pemesanan_crud.php';
                                     <td>".$row['jenis_mobil']."</td>
                                     <td>".$row['tanggal_pesan']."</td>
                                     <td class='action-buttons'>
-                                        <a href='pre-order.php?edit=".$row['id']."' class='action-button'>Edit</a>
-                                        <a href='pemesanan_crud.php?delete=".$row['id']."' class='action-button'>Hapus</a>
+                                        <a href='pre-order.php?edit=".$row['id']."' class='action-button edit-button'>Edit</a>
+                                      <a href='pemesanan_crud.php?delete=".$row['id']."' class='action-button delete-button'>Hapus</a>
                                     </td>
                                   </tr>";
                         }
